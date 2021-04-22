@@ -1,3 +1,4 @@
+//deneme
 SELECT
 ss.Id AS anket_id,
 s.Id,
