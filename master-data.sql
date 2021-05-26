@@ -48,8 +48,6 @@ FROM [SYMvePersonelSabimAnket].[dbo].[SGGMPatients]    p WITH (NOLOCK)
 JOIN [SYMvePersonelSabimAnket].[dbo].[Cities]          c WITH (NOLOCK)  ON c.Id =p.CityId
 JOIN [SYMvePersonelSabimAnket].[dbo].[AspNetUsers]     a WITH (NOLOCK)  ON p.[CalledById]  = a.[Id]
 where p.CallTime > '2020-11-06'
---AND a.Email LIKE '%avsar%'
---OR a.Email LIKE '%neriman5%' or a.Email LIKE '%mustafa.adali%' OR a.Email LIKE '%akin.ozturk%'
 AND p.Reason = 0
 ORDER BY p.[CallTime] ASC
 OPTION (maxdop 16)
